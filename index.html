@@ -91,7 +91,6 @@
           ledStatusEl.className = "led-off";
           distanceEl.textContent = "-- cm";
 
-          // --- CAMBIO IMPORTANTE ---
           // Si se pierde la conexión, detenemos la medición automática
           if (isUpdatingDistance) {
             stopDistanceUpdates();
@@ -156,7 +155,6 @@
         }
       }
 
-      // --- NUEVAS FUNCIONES ---
       function startDistanceUpdates() {
         isUpdatingDistance = true;
         getDistanceButton.textContent = "Detener Medición";
@@ -175,7 +173,7 @@
         getDistanceButton.classList.remove("active");
       }
 
-      // Función para actualizar la UI (sin cambios)
+      // Función para actualizar la UI
       function updateUI() {
         if (ledState) {
           ledButton.textContent = "Apagar LED";
@@ -188,7 +186,7 @@
         }
       }
 
-      // Función para actualizar la hora (sin cambios)
+      // Función para actualizar la hora
       function updateLastUpdated() {
         const now = new Date();
         lastUpdatedEl.textContent = now.toLocaleTimeString();
@@ -199,7 +197,6 @@
         await controlLED(!ledState);
       });
 
-      // --- LÓGICA DEL BOTÓN DE DISTANCIA ACTUALIZADA ---
       getDistanceButton.addEventListener("click", () => {
         if (isUpdatingDistance) {
           stopDistanceUpdates(); // Si está midiendo, la detenemos
@@ -208,10 +205,10 @@
         }
       });
 
-      // Iniciar verificación de conexión periódica (sin cambios)
+      // Iniciar verificación de conexión periódica
       setInterval(checkConnection, 10000);
 
-      // Verificar conexión al cargar la página (sin cambios)
+      // Verificar conexión al cargar la página
       checkConnection();
     </script>
   </body>
