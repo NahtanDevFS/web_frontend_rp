@@ -43,11 +43,9 @@ button:hover {
   background-color: #2980b9;
 }
 button.active {
-  /* NUEVO: Estilo para el botón cuando está activo */
   background-color: #e74c3c;
 }
 button.active:hover {
-  /* NUEVO: Estilo para el botón activo al pasar el mouse */
   background-color: #c0392b;
 }
 button:disabled {
