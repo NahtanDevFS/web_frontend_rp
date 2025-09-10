@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <script>
+    <script type="text/javascript">
       const distanceEl = document.getElementById("distance");
       const ledButton = document.getElementById("led-toggle-button");
       const getDistanceButton = document.getElementById("get-distance-button");
@@ -46,12 +46,12 @@
       const connectionStatusEl = document.getElementById("connection-status");
       const lastUpdatedEl = document.getElementById("last-updated");
 
-      const API_BASE_URL = "https://2087fe1de75e.ngrok-free.app";
+      const API_BASE_URL =
+        "https://topologic-quarrelingly-terri.ngrok-free.app";
 
       let ledState = false;
       let isConnected = false;
 
-      // --- NUEVAS VARIABLES ---
       // Guardará el temporizador para poder iniciarlo y detenerlo
       let distanceInterval = null;
       // Controla si la medición está activa
